@@ -1,0 +1,26 @@
+.style1 { color:black ; background-color:gray;font-size: 150%;}
+background-color:yellow
+p.serif{font-family:"Times New Roman",times,serif;}
+p.monospace{font-family:"courier new",courier,monospace;}
+p.sanserif{font-family:"Helvetica",Arial,sanserif;}
+p.cursive{font-family:"florence",cursive;}
+p.fantasy{font-family:"Blippo",fantasy;}
+
+#intro{color:white;background-color:gray;} /* for DIV elements*/
+
+body{font:Arial,"Helvetica Neue", Helvetica,sans-serif;font-size:150%;}
+
+p.right{text-align:right;}
+p.left{text-align:left;}
+p.top{text-align:top;} /* (td.top) if it is for table 
+ vertical-align also takes baseline, sub, super % and px (pt,cml)
+
+*/
+p.middle{text-align:middle;}
+p.bottom{text-align:bottom;}
+
+p.small{font-size:small;}
+p.medium{font-size:medium;}
+p.large{font-size:large;}
+p.xlarge{font-size:xlarge;}
+p.xxsmall{font-size:xxsmall;}
