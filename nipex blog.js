@@ -1,3 +1,4 @@
+
 <script>
 document.write("nipex blog");
 window.alert("welcome to my blog");
@@ -37,7 +38,6 @@ document.write(a)
 function nipexfunction () {
   x = document.getElementById('demo')
 }
-
 
 
 
