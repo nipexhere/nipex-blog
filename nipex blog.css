@@ -8,19 +8,78 @@ p.fantasy{font-family:"Blippo",fantasy;}
 
 #intro{color:white;background-color:gray;} /* for DIV elements*/
 
-body{font:Arial,"Helvetica Neue", Helvetica,sans-serif;font-size:150%;}
-
-p.right{text-align:right;}
-p.left{text-align:left;}
-p.top{text-align:top;} /* (td.top) if it is for table 
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+    position: absolute;
+    display: inline-block;
+}
+.dropdown-content {
+    display: inline;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: rgb(236, 96, 3);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: rgba(97, 8, 240, 0.2);
+}
+.dropdown:hover .dropdown-content {
+    display: inline;
+}
+.special-text {
+    color: paleturquoise;
+}
+body {
+    font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 150%;
+}
+p.right {
+    text-align: right;
+}
+p.left {
+    text-align: left;
+}
+p.top {
+    text-align: top;
+}
+p.middle {
+    text-align: middle;
+}
+p.bottom {
+    text-align: bottom;
+}
+p.small {
+    font-size: small;
+}
+p.medium {
+    font-size: medium;
+}
+p.large {
+    font-size: large;
+} /* (td.top) if it is for table 
  vertical-align also takes baseline, sub, super % and px (pt,cml)
 
 */
-p.middle{text-align:middle;}
-p.bottom{text-align:bottom;}
-
-p.small{font-size:small;}
-p.medium{font-size:medium;}
-p.large{font-size:large;}
-p.xlarge{font-size:xlarge;}
-p.xxsmall{font-size:xxsmall;}
+p.small {
+    font-size: small;
+}
+p.medium {
+    font-size: medium;
+}
+p.large {
+    font-size: large;
+}
