@@ -1,32 +1,10 @@
-
-<script>
-document.write("nipex blog");
-window.alert("welcome to my blog");
-console.log('nipex blog is doing fine')
-
-var name ='nipex';
-var text ='i am "nipex"your only afro emo artiste';
-
-var isonline=true;
-var isoffline=false;
- */
-
-// +, -, *, /, %, ++ (increment), --(decrement) 
-/* var a = 10; a++; 
-function nipexfunction () {
-  x = document.getElementById('demo')
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-</script>
+/*const time = new Date().getHours();
+let greeting;
+if (time < 12) {
+    greeting = "GOOD MORNING NIPFAM";
+} else if (time < 16) {
+    greeting = "GOOD DAY NIPFAM";
+} else {
+    greeting = "GOOD EVENING NIPFAM";
+}
+window.alert(greeting); */

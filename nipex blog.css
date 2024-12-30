@@ -3,103 +3,83 @@ html, body {
     height: 100%; /* Ensure the html and body take up the full height of the viewport */
     margin: 0;
     padding: 0;
-}
-body {
+    line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        scroll-behavior: smooth;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 150%;
-    color: rgba(219, 168, 0, 0.473);
+    background-color: black; /* Dark background color */
+    color: #a30404a4; /* Light text color */
     transition: background-color 0.5s ease, color 0.5s ease;
-    position: relative;
-    background-image: url('images/Nippy.jpg'); /* Add your background image here */
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
 }
 
-/* Transitional Background Image */
-body::before {
-    content:"";
-    background-image: url('images/Nippy.jpg');
+.transitional-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex; /* Ensure the div is displayed */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    color: white; /* Ensure text color is visible */
+    z-index: 0; /* Ensure the z-index is set correctly */
+}
+
+.transitional-background::before {
+    content: "";
     background-size: cover;
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    opacity: 1; /* Adjust the opacity to make the background image transparent */
+    opacity: 0.1; /* Adjust the opacity to make the background image transparent */
     z-index: -1; /* Ensure the pseudo-element is behind the content */
-    animation: backgroundToggle 10s infinite; /* Add animation to toggle background images */
+    animation: backgroundToggle 10s infinite;
 }
-
-/* Define the keyframes for the animation */
 @keyframes backgroundToggle {
     0% {
-        background-image: url('images/Nipexx.jpg');
-    }
-    20% {
         background-image: url('images/Nippy.jpg');
     }
-    100% {
+    50% {
         background-image: url('images/Nipexx.jpg');
     }
-}
-
-body:hover::before {
-    background-image: url('images/Nipexx.jpg');
+    100% {
+        background-image: url('images/Nippy.jpg');
+    }
 }
 
 /* Header Styles */
 header {
-    background-color: transparent;
-    padding: 10px;
-    text-align: center;
+    background-image: url('images/neww.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent; /* Semi-transparent background */
+    padding: 0.06px;
+    text-align: left;
     transition: background-color 0.5s ease;
 }
-
-header h1 {
-    margin: 0;
-    color: black;
-    font-size: 2.5em;
+    header h1 {
+        margin: 0;
+        color: blue;
+        font-size: 2.5em;
+        flex-grow: 1;
+        text-align: center;
 }
 
-/* Button Styles */
-button, .buttonstyle {
-    background-color: purple;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-button:hover, .buttonstyle:hover {
-    background-color: red;
-    color: black;
-}
-
-button a {
-    color: rgba(15, 15, 15, 0.726);
-    text-decoration: none;
-}
-
-button.email-button {
-    margin-top: 20px;
-}
-
-/* Navigation Styles */
+/* Navigation Styles*/
 .navbar {
     display: flex;
     justify-content: center;
-    background-color: rgb(99, 3, 3);
+    background-color: transparent; /* Semi-transparent background */
     padding: 10px;
     transition: background-color 0.5s ease;
 }
 
 .navbar a {
-    color: white;
+    color: #45046bc7;
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
@@ -107,8 +87,48 @@ button.email-button {
 }
 
 .navbar a:hover {
-    background-color: purple;
-    color: rgb(0, 0, 0);
+    background-color: #e60000; /* Red background on hover */
+    color: #1a1a1a; /* Dark text color on hover */
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn { 
+    background-color:transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: center; /* Align text to the left */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent; /* Semi-transparent background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(16, 4, 190, 0.418);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Main Content Styles */
@@ -118,81 +138,65 @@ main {
 }
 
 main h2 {
-    color: purple;
+    color: grey; /* Red color */
     font-size: 2em;
     margin-bottom: 20px;
     transition: color 0.5s ease;
 }
 
 main p {
-    color: black;
+    color: yellow;
     font-size: 1.2em;
-    transition: color 5s ease;
+    transition: color 0.5s ease;
 }
 
-h6 {
-    color: black;
-}
-
-/* Footer Styles */
-footer {
-    padding: 50px;
-    text-align: center;
-    color: rgba(5, 5, 5, 0.904);
-    position: fixed;
-    width: 90%;
-    height: 5px;
-    bottom: 0;
+/* Button Styles */
+button, .buttonstyle {
+    background-color: purple; /* Red background color */
+    color: black ;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Dropdown Menu Styles */
-.dropdown {
-    position: absolute;
-    left: 0; /* Align the dropdown to the left side of the screen */
-    display: inline-block;
+button:hover, .buttonstyle:hover {
+
+    color: #50520a; /* Red text color on hover */
 }
 
-.dropbtn {
-    background-color: rgb(97, 85, 85);
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    margin: 0.25px;
-    font-size: 16px;
-    border: 15px,10px,15px,10px;
-    cursor: pointer;
-    text-align: left; /* Align text to the left */
-    transition: background-color 0.5s ease, color, 0.5s ease;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-.dropdown-content a {
-    color: rgba(247, 182, 3, 0.822);
-    padding: 12px 16px;
+button a {
+    color: #f0f0f0;
     text-decoration: none;
-    display: block;
 }
 
-.dropdown-content a:hover {
-    background-color: rgba(190, 4, 4, 0.418);
+button.email-button {
+    margin-top: 20px;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+
+
+/* Footer Styles */
+footer {  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 20px;
+    text-align: center;
+    text-align: center;
+    color: yellow;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 .socials {
     display: flex;
     justify-content: center;
     padding: 10px;
 }
-
 .socials a {
     margin: 0 10px;
     color: yellow;
@@ -202,5 +206,5 @@ footer {
 }
 
 .socials a:hover {
-    color: yellow;
+    color: rgb(36, 2, 128);
 }
